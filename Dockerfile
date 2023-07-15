@@ -1,4 +1,4 @@
-# test
-FROM bitnami/tomcat
-ENV ALLOW_EMPTY_PASSWORD=yes
-COPY target/*.war /opt/bitnami/tomcat/webapps_default/addressbook.war
+FROM tomcat:8.0-alpine
+EXPOSE 8080
+ADD target/*.war /usr/local/tomcat/webapps/
+CMD [ "catalina.sh", "run" ]
