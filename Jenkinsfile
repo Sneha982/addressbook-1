@@ -9,6 +9,7 @@ pipeline {
                 script {
                     echo "Building The Application"
                     sh 'mvn clean install jetty:run'
+                    sh 'mvn package'
                     
                 }
             }
