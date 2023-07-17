@@ -8,7 +8,8 @@ pipeline {
             steps {
                 script {
                     echo "Building The Application"
-                    sh 'mvn clean install jetty run'
+                    #sh 'mvn clean install jetty run'
+                    sh 'clean install jetty:run'
                     
                 }
             }
